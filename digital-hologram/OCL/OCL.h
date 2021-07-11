@@ -1,6 +1,6 @@
-#pragma once
-
 #include "resource.h"
 
-INT_PTR CALLBACK InitOCLProc(HWND, UINT, WPARAM, LPARAM);
+#include "framework.h"
+
+INT_PTR CALLBACK InitOCLDlgProc(HWND, UINT, WPARAM, LPARAM);
 

@@ -1,5 +1,4 @@
-﻿#include "framework.h"
-#include "OCL.h"
+﻿#include "OCL.h"
 
 #define CONTROL_ID (LOWORD((wParam)))
 
@@ -9,14 +8,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ int       nCmdShow)
 {
 
-    DialogBox(hInstance, MAKEINTRESOURCE(IDD_INIT_OCL), NULL, InitOCLProc);
+    DialogBox(hInstance, MAKEINTRESOURCE(IDD_INIT_OCL), NULL, InitOCLDlgProc);
 
     return 0;
 }
 
-INT_PTR CALLBACK InitOCLProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+INT_PTR CALLBACK InitOCLDlgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    auto ControlID = CONTROL_ID;
+    int16 ControlID = CONTROL_ID;
 
     switch (msg)
     {
